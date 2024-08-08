@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken"
 
 const generateToken = (userData) => {
-    return jwt.sign(userData,process.env.JWT_SECRET_KEY)
+    return jwt.sign(userData,"12345")
 }
 
 const jwtAuthMiddleware = (req,res,next) => {
@@ -14,7 +14,7 @@ const jwtAuthMiddleware = (req,res,next) => {
         return res.status(404).json({msg:"Unaithorized"})
     }
     try{
-        const decoded = jwt.verify(token,process.env.JWT_SECRET_KEY)
+        const decoded = jwt.verify(token,"12345")
         req.userPayload = decoded
         next();
     }catch(err){
