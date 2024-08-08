@@ -11,7 +11,7 @@ export default function LoginPage(){
     async function handleSubmit(e){
         e.preventDefault()
         try{
-            const respsonse = await axios.post("http://localhost:3000/login",{username,password},{withCredentials:true});
+            const respsonse = await axios.post("https://deploy-mern-beryl.vercel.app/login",{username,password},{withCredentials:true});
             console.log(respsonse)
             setUsername("")
             setPassword("")
