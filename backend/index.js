@@ -16,6 +16,7 @@ const app = express();
 app.use(express.json())
 app.use(cors({
     origin:"https://deploy-mern-client-liard.vercel.app",
+    methods:["POST","GET"],
     credentials:true
 }))
 app.use(cookieParser())
