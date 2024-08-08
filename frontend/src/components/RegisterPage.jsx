@@ -12,7 +12,7 @@ export default function RegisterPage(){
     async function handleSubmit(e){
         e.preventDefault()
         try{
-            const respsonse = await axios.post("http://localhost:3000/register",{username,email,password});
+            const respsonse = await axios.post("https://deploy-mern-beryl.vercel.app/register",{username,email,password});
             console.log(respsonse)
             setEmail("")
             setUsername("")
