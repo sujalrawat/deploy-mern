@@ -15,7 +15,7 @@ const app = express();
 //middlewares
 app.use(express.json())
 app.use(cors({
-    origin:"https://deploy-mern-client-liard.vercel.app",
+    origin:"https://deploy-mern-client-liard.vercel.app/",
     credentials:true
 }))
 app.use(cookieParser())
